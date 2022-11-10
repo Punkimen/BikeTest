@@ -1,0 +1,159 @@
+$md1: 1440px;
+$md2: 1200px;
+$md3: 992px;
+$md4: 767px;
+$md5: 568px;
+$md6: 412px;
+
+$colorOrange: #3922C5;
+
+html,
+body {
+    height: 100%;
+    box-sizing: border-box;
+
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    // font-family: "SFPro", serif;
+    background: #F4F4F4;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0C0C0C;
+    overflow-x: hidden;
+
+    &.overlay {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 0 20px;
+    max-width: 1740px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+input,
+textarea {
+    padding: 14px 16px;
+    border-radius: 16px;
+    border: 1px solid #D9D9D9;
+    background: #fff;
+    outline: none;
+    transition: all 0.2s;
+
+    &:hover,
+    &:focus {
+        border: 1px solid #3922C5;
+    }
+}
+
+.btn {
+    cursor: pointer;
+    background: #3922C5;
+    border-radius: 16px;
+    padding: 14px 24px;
+    color: #fff;
+    border: none;
+    outline: none;
+    transition: all 0.2s;
+
+    &:hover {
+        background: #2C1A9A;
+    }
+
+    &:active {
+        background: #1F1368;
+    }
+}
+
+.btn_transparent {
+    cursor: pointer;
+    background: none;
+    border-radius: 16px;
+    padding: 14px 24px;
+    color: #0C0C0C;
+    border: none;
+    outline: none;
+    transition: all 0.2s;
+
+    &:hover {
+        color: #2C1A9A;
+    }
+
+    &:active {
+        color: #1F1368;
+    }
+}
+
+.input-block {
+    position: relative;
+
+    input {
+        width: 100%;
+    }
+
+    &.error {
+        input {
+            border-color: red;
+        }
+
+        &:after {
+            content: attr(data-error);
+            position: absolute;
+            left: 0;
+            top: calc(100% + 5px);
+            font-size: 10px;
+            line-height: 1;
+            color: red;
+        }
+    }
+}
